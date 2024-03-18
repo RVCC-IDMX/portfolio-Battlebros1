@@ -7,13 +7,13 @@
 
 // slightly darken
 @function shade($color, $percentage) {
-  @return mix(black, $color, $percentage);
+  @return mix(rgb(0, 0, 0), $color, $percentage);
 }
 
 // auto detect background and set color
 @function set-text-color($color) {
   @if (lightness($color) > 50) {
-    @return #333; // Light background
+    @return #333333; // Light background
   } @else {
     @return #eee; // Dark background
   }
